@@ -30,19 +30,19 @@ The team wants to ship a Go program (https://github.com/containous/foobar-api), 
 - openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout certs/key.pem -out certs/cert.pem -subj "/CN=foobar-api/O=foobar-api"
 
 4. Deploy the PVC for certs:
--  kubectl apply -f pvc.yaml
+-  kubectl apply -f k8s/pvc.yaml
 
 5. Deploy the API:
-- kubectl apply -f deployment.yaml && kubectl apply -f service.yaml
+- kubectl apply -f k8s/deployment.yaml && kubectl apply -f k8s/service.yaml
 
 6. Configure de Ingress:
-- kubectl apply -f ingress.yaml
+- kubectl apply -f k8s/ingress.yaml && kubectl apply -f k8s/traefik-deployment.yaml
 
 7. Deploy Prometheus and Grafana:
-- kubectl apply -f prometheus.yaml && kubectl apply -f grafana.yaml
+- kubectl apply -f k8s/prometheus.yaml && kubectl apply -f k8s/grafana.yaml
 
 8. Set up Traefik metrics and Grafana UI:
-- kubectl apply -f traefik-metrics.yaml && kubectl apply -f grafana-ingress.yaml
+- kubectl apply -f k8s/traefik-metrics.yaml && kubectl apply -f k8s/grafana-ingress.yaml
 
 ## Accessing the api and monitoring stack
 
