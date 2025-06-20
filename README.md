@@ -51,7 +51,7 @@ The team wants to ship a Go program (https://github.com/containous/foobar-api), 
 
 ### Grafana dashboards
 - `http://grafana.34.162.161.217.sslip.io`
-- `http://localhost:3000/goto/ieo6gDENR?orgId=1`
+- `http://grafana.34.162.161.217.sslip.io/dashboards`
 
 ### Login credentials:
 - **User:** admin
