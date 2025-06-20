@@ -46,16 +46,16 @@ The team wants to ship a Go program (https://github.com/containous/foobar-api), 
 
 ## Accessing the api and monitoring stack
 
-### API Endpoint
+### API endpoint
 - `https://34.162.161.217.sslip.io/api`
 
-### Grafana Dashboard
-- NodePort: `http://34.162.161.217:30300`
-- Or via Ingress: `http://grafana.34.162.161.217.sslip.io`
+### Grafana dashboards
+- `http://grafana.34.162.161.217.sslip.io`
+- `http://localhost:3000/goto/ieo6gDENR?orgId=1`
 
-Login credentials:
+### Login credentials:
 - **User:** admin
 - **Password:** TBD
 
 ### Prometheus UI
-- NodePort: `http://34.162.161.217:30090`
+- TBD
