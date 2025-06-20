@@ -1,0 +1,14 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: foobar-api-tcp
+  namespace: default
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: foobar-api
+          port: 443
+

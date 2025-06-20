@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foobar-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foobar-api
+  template:
+    metadata:
+      labels:
+        app: foobar-api
+    spec:
+      containers:
+      - name: foobar-api
+        image: fernandobenegasa/foobar-api:latest
+        ports:
+        - containerPort: 443
+        volumeMounts:
+        - name: cert-volume
+          mountPath: /cert
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 443
+            scheme: HTTPS
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          failureThreshold: 5
+          timeoutSeconds: 3
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 443
+            scheme: HTTPS
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          failureThreshold: 5
+          timeoutSeconds: 3
+      volumes:
+      - name: cert-volume
+        persistentVolumeClaim:
+          claimName: cert-pvc
