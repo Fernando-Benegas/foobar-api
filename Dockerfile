@@ -11,7 +11,6 @@ COPY . ./
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o foobar-api
 
-# Final stage
 FROM alpine:latest
 
 WORKDIR /root/
