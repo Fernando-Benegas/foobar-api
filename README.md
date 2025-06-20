@@ -44,7 +44,7 @@ The team wants to ship a Go program (https://github.com/containous/foobar-api), 
 8. Set up Traefik metrics and Grafana UI:
 - kubectl apply -f traefik-metrics.yaml && kubectl apply -f grafana-ingress.yaml
 
-## Accessing the Stack
+## Accessing the api and monitoring stack
 
 ### API Endpoint
 - `https://34.162.161.217.sslip.io/api`
