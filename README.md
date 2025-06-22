@@ -1,7 +1,7 @@
 # Technical assignment: Ship foobar-api
 
 ## Assignment description
-The team wants to ship a Go program (https://github.com/containous/foobar-api), and expose its API through HTTPS.The team told you that the certificates should be in a PVC. The assignment is for you to deploy this program and expose it using Traefik.
+The team wants to ship a Go program (https://github.com/containous/foobar-api), and expose its API through HTTPS. The team told you that the certificates should be in a PVC. The assignment is for you to deploy this program and expose it using Traefik.
 
 
 ## Components
